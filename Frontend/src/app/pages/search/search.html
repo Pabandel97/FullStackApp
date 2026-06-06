@@ -1,0 +1,15 @@
+<h1>Searching: <small>{{ query }}</small></h1>
+
+<div class="row">
+    @if(technologies.length == 0){
+        <div class="col-md-12">
+            <div class="alert alert-info">There's not technologies with this patter: {{ query }}</div>
+        </div>
+    }
+</div>
+
+<div class="card-columns">
+    @for (technologies of technologies; track technologies._id) {
+        <app-technology-card [technology]="technologies"></app-technology-card>
+    }
+</div>

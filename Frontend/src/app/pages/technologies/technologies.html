@@ -1,0 +1,11 @@
+<h1>Technologies <small>Backend and Frontend</small> </h1>
+<hr/>
+<div class="card-columns">
+    @for (item of technologies; track item._id) {
+    <!-- The loop runs here, creating a card for each 'item' -->
+    <app-technology-card [technology]="item"></app-technology-card>
+  } @empty {
+    <!-- This block shows automatically if your array is empty (e.g., while loading) -->
+    <p>No technologies available to display.</p>
+  }
+</div>
